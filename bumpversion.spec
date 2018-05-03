@@ -2,14 +2,14 @@
 %global ghname bump2version
 
 Name:           bumpversion
-Version:        0.5.5
-Release:        2%{?dist}
+Version:        0.5.8
+Release:        1%{?dist}
 Summary:        Version-bump your software with a single command
 
 Group:          Development/Tools
 License:        MIT
 URL:            https://github.com/%{ghuser}/%{ghname}
-Source0:        https://github.srcurl.net/%{ghuser}/%{ghname}/v%{version}/%{ghname}-%{version}.tar.gz
+Source0:        https://github.srcurl.net/%{ghuser}/%{ghname}/v%{version}/%{ghname}-v%{version}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  python3-devel
@@ -39,7 +39,7 @@ mv %{buildroot}%{_bindir}/%{ghname} %{buildroot}%{_bindir}/%{name}
 
 
 %files
-%doc README.rst
+%doc README.md
 %license LICENSE.rst
 %attr(0755,root,root) %{_bindir}/%{name}
 %dir %{python3_sitelib}/%{name}
@@ -50,6 +50,9 @@ mv %{buildroot}%{_bindir}/%{ghname} %{buildroot}%{_bindir}/%{name}
 
 
 %changelog
+* Thu May 03 2018 Hui Tang <duriantang@gmail.com> - 0.5.8-1
+- update to version 0.5.8
+
 * Wed Feb 07 2018 Fedora Release Engineering <releng@fedoraproject.org> - 0.5.5-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
 
